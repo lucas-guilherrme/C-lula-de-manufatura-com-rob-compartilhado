@@ -54,5 +54,7 @@ Consequência: se não houver garantia de que o Buffer será esvaziado (evento e
 Tentativa de operação inválida: o comando de "Pegar peça da M1" ser enviado quando a M1 ainda está trabalhando (sem peça pronta).
 ---
 ## Diagrama de blocos e explicação
+
+!['Diagrama: Sistema de Controle - Supervisor](Diagrama de Blocos/Sistema de Controle - Supervisor.png)
 ---
 ---
