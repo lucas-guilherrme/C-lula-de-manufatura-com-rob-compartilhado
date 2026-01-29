@@ -1,6 +1,11 @@
 <img width="1472" height="462" alt="image" src="https://github.com/user-attachments/assets/e7e0984c-88ab-4751-b16e-01dc40f1b139" />
 
 ---
+<center/>
+  
+# __Célula de manufatura com robô compartilhado__
+  
+</center>
 
 ## 📜 Índice
 
@@ -16,7 +21,6 @@
 - [Documentação](#-documentação)
 ---
 
-# __Célula de manufatura com robô compartilhado__
 ---
 ## _Descrição do problema_
 
@@ -70,10 +74,9 @@ Tentativa de operação inválida: o comando de "Pegar peça da M1" ser enviado 
 ---
 ## Diagrama de blocos e explicação
 
-<img width="980" height="780" alt="Sistema de Controle - Supervisor" src="https://github.com/user-attachments/assets/a353c47d-da4f-40d7-86d6-ecbf69d46b58" />
-
 <img width="1320" height="820" alt="Sistema Físico - Planta" src="https://github.com/user-attachments/assets/b4ce9b42-23bc-4917-bfe4-5422360aec47" />
 
+<img width="980" height="780" alt="Sistema de Controle - Supervisor" src="https://github.com/user-attachments/assets/a353c47d-da4f-40d7-86d6-ecbf69d46b58" />
 
 ---
 ---
