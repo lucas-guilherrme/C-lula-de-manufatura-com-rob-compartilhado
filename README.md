@@ -1,9 +1,9 @@
 <img width="1472" height="462" alt="image" src="https://github.com/user-attachments/assets/e7e0984c-88ab-4751-b16e-01dc40f1b139" />
 
 ---
-<center/>
-  
-# __Célula de manufatura com robô compartilhado__
+</center>
+
+# Célula de manufatura com robô compartilhado
   
 </center>
 
@@ -77,6 +77,12 @@ Tentativa de operação inválida: o comando de "Pegar peça da M1" ser enviado 
 <img width="1320" height="820" alt="Sistema Físico - Planta" src="https://github.com/user-attachments/assets/b4ce9b42-23bc-4917-bfe4-5422360aec47" />
 
 <img width="980" height="780" alt="Sistema de Controle - Supervisor" src="https://github.com/user-attachments/assets/a353c47d-da4f-40d7-86d6-ecbf69d46b58" />
+
+<img width="1010" height="1280" alt="robot_buffer_control-Photoroom" src="https://github.com/user-attachments/assets/4f9ede2f-4bc4-4e2c-aef1-149f0bc7f061" />
+
+
+
+
 
 ---
 ---
