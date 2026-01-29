@@ -55,6 +55,6 @@ Tentativa de operação inválida: o comando de "Pegar peça da M1" ser enviado 
 ---
 ## Diagrama de blocos e explicação
 
-!['Diagrama: Sistema de Controle - Supervisor'](Diagrama de Blocos/Diagrama de Blocos/Sistema Físico - Planta.png)
+![Diagrama: Sistema de Controle - Supervisor](Diagrama de Blocos/Diagrama de Blocos/Sistema Físico - Planta.png)
 ---
 ---
