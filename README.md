@@ -37,7 +37,6 @@ Capacidade limitada: o buffer possui um número finito de slots (posições). Pa
 Transbordamento (overflow): Não é fisicamente possível (ou é catastrófico) depositar uma peça se o buffer já estiver cheio.
 Fluxo operacional e interações
 O ciclo de operação nominal do sistema segue a seguinte lógica:
-
 Um sinal é enviado para ligar a Máquina 1 e Máquina 2.
 As máquinas processam o material e, eventualmente, seus sensores indicam o fim do processo (evento não-controlável). As máquinas param e ficam aguardando a retirada da peça.
 O Robô, estando livre, desloca-se até uma máquina que tenha uma peça pronta.
@@ -47,7 +46,6 @@ Se o Buffer tiver espaço livre, o Robô deposita a peça e volta ao estado livr
 Um evento externo remove a peça do Buffer, liberando espaço para futuras operações.
 * **Problemas potenciais**
 Sem um Supervisor (controlador lógico) adequado, o sistema está sujeito às seguintes falhas que o projeto deve evitar:
-
 Colisão de recursos: o robô tentar pegar peças de M1 e M2 simultaneamente.
 Violação de capacidade: o robô tentar depositar uma peça no Buffer quando este já está cheio, o que causaria danos à peça ou ao equipamento.
 Bloqueio (deadlock):
