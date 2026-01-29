@@ -1,6 +1,21 @@
 <img width="1472" height="462" alt="image" src="https://github.com/user-attachments/assets/e7e0984c-88ab-4751-b16e-01dc40f1b139" />
 
 ---
+
+## 📜 Índice
+
+- [Introdução](#-introdução)
+- [Conexões e Configurações de Hardware](#-conexões-e-configurações-de-hardware)
+- [Motivo](#-motivo)
+- [Principais caracteristicas](#-principais-caracteristicas)
+- [Instalação](#-instalacao)
+- [Principais Características](#-principais-características---oled)
+- [Instalação](#-instalação)
+- [Quick Start](#-quick-start)
+- [Alguns exemplos](#-alguns-exemplos)
+- [Documentação](#-documentação)
+---
+
 # __Célula de manufatura com robô compartilhado__
 ---
 ## _Descrição do problema_
