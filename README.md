@@ -64,8 +64,10 @@ Cenário: o Buffer está cheio. O Robô está segurando uma peça (aguardando o 
 Consequência: se não houver garantia de que o Buffer será esvaziado (evento externo), o sistema trava completamente e nenhuma máquina pode produzir mais nada.
 Tentativa de operação inválida: o comando de "Pegar peça da M1" ser enviado quando a M1 ainda está trabalhando (sem peça pronta).
 ---
-Visão do problema
-![Visao do sistema](assets/Visao do sistema.png)
+## Visão do problema
+
+![Visao do sistema](assets/Visao_do_sistema.png)
+
 ---
 ## Diagrama de blocos e explicação
 
