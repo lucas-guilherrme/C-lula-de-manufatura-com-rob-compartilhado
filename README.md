@@ -9,17 +9,8 @@
 
 ## 📜 Índice
 
-- [Introdução](#-introdução)
-- [Conexões e Configurações de Hardware](#-conexões-e-configurações-de-hardware)
-- [Motivo](#-motivo)
-- [Principais caracteristicas](#-principais-caracteristicas)
-- [Instalação](#-instalacao)
-- [Principais Características](#-principais-características---oled)
-- [Instalação](#-instalação)
-- [Quick Start](#-quick-start)
-- [Alguns exemplos](#-alguns-exemplos)
-- [Documentação](#-documentação)
----
+- [Descrição do problema](#-Descrição-do-problema)
+- [Diagrama de blocos e explicação](#-Diagrama-de-blocos-e-explicação)
 
 ---
 ## _Descrição do problema_
