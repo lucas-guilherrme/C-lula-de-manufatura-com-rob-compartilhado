@@ -14,6 +14,8 @@
 - [Diagrama de blocos e explicação](#-Diagrama-de-blocos-e-explicação)
 
 ---
+<div align="justify">
+  
 ## _Descrição do problema_
 
 * **Visão geral do sistema**
@@ -63,6 +65,8 @@ Bloqueio (deadlock):
 Cenário: o Buffer está cheio. O Robô está segurando uma peça (aguardando o buffer liberar). As Máquinas M1 e M2 completaram suas peças e estão aguardando o Robô.
 Consequência: se não houver garantia de que o Buffer será esvaziado (evento externo), o sistema trava completamente e nenhuma máquina pode produzir mais nada.
 Tentativa de operação inválida: o comando de "Pegar peça da M1" ser enviado quando a M1 ainda está trabalhando (sem peça pronta).
+</div>
+
 ---
 ## Visão do problema
 
