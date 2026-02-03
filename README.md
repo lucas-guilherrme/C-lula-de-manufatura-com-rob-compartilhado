@@ -1,22 +1,29 @@
 <img width="1472" height="462" alt="image" src="https://github.com/user-attachments/assets/e7e0984c-88ab-4751-b16e-01dc40f1b139" />
 
 ---
-</center>
 
-# Célula de manufatura com robô compartilhado
+<div align="center">
+
+# __Célula de manufatura com robô compartilhado__
   
-</center>
+</div>
 
 ## 📜 Índice
 
 - [Descrição do problema](#-Descrição-do-problema)
+    - [Visão geral do sistem](#-Visão-geral-do-sistem)
+    - [Problemas potenciais](#-Problemaspotenciais)
+    - [Detalhamento dos componentes](#-Detalhamento-dos-componentes)
 - [Visão do problema](#-Visão-do-problema)
 - [Diagrama de blocos e explicação](#-Diagrama-de-blocos-e-explicação)
+  - [Diagrama de Blocos](#-Diagrama-de-blocos)
+  - [Figuras dos autômatos](#-Figuras-automatos)
+  - [Links dos videos](#-link-videos)
 
 ---
 <div align="justify">
   
-## _Descrição do problema_
+### Descrição do problema
 
 * **Visão geral do sistema**
 O sistema consiste em uma célula de manufatura automatizada composta por duas estações de processamento independentes (Máquinas 1 e 2), um sistema de transporte compartilhado (Robô Industrial) e uma esteira de saída com capacidade de armazenamento limitada (Buffer).
@@ -57,6 +64,7 @@ O Robô retira a peça da máquina (liberando a máquina para iniciar um novo ci
 O Robô transporta a peça até o Buffer.
 Se o Buffer tiver espaço livre, o Robô deposita a peça e volta ao estado livre.
 Um evento externo remove a peça do Buffer, liberando espaço para futuras operações.
+
 * **Problemas potenciais**
 Sem um Supervisor (controlador lógico) adequado, o sistema está sujeito às seguintes falhas que o projeto deve evitar:
 Colisão de recursos: o robô tentar pegar peças de M1 e M2 simultaneamente.
@@ -68,22 +76,87 @@ Tentativa de operação inválida: o comando de "Pegar peça da M1" ser enviado 
 </div>
 
 ---
-## Visão do problema
+### Visão do problema
+
+A imagem abaixo retrata a visão do ambiente em que as máquinas (M1 e M2) e o rôbo estão inseridos.
 
 ![Visao do sistema](assets/Visao_do_sistema.png)
 
 ---
-## Diagrama de blocos e explicação
+### Diagrama de blocos e explicação
+
+#### Diagrama de Blocos
+
+O aut^mato(S) será definido como sendo uma 5-tupla $$ S = (Q, \Sigma, \delta, q_0, Q_m) $$ 
+Onde:
+- **Q**: Conjunto de estados
+- **$$\Sigma$$**: Alfabeto de entrada
+- **$$\delta$$**: Função de transição
+- **$$q_0$$**: Estado inicial
+- **$$Q_m$$**: Estados de aceitação
+
+<div align="justify">
+
+* O conjunto de estados é composto essencialmente pelos estados das máquinas ($$M_1$$ e $$M_2$$), robô e o buffer.
+
+### Estados dos Componentes (Vetor de Estado)
+
+O vetor de estados global será uma tupla contendo o estado de cada um dos itens citados anteriormente, ou seja, ($$M_1$$, $$M_2$$, R, B).
+- __M1, M2 (Máquinas)__: W (Working/Trabalhando), D (Done/Pronta), I (Idle/Parada e vazia).
+- __R (Robô)__: F (Free/Livre e na posição neutra), G1 (Holding/Carregando peça da M1), G2 (Holding/Carregando peça da M2).
+- __B (Buffer)__: $$B_0, B_1, B_2$$ (número de peças no buffer, capacidade máxima=2).
+
+## Exemplo
+
+* m1_start só é possível se M1 == I (máquina ociosa e vazia).
+* get_m1 só é possível se (M1 == D) and (R == F) (M1 pronta e robô livre).
+* put_buffer só é possível se (R == G1 or R == G2) and (B < 2) (Robô carregando e buffer não cheio).
+* buffer_out só é possível se (B > 0).
+
+Efeitos das transições:
+
+* Após get_m1: M1 vai de D para I; R vai de F para G1.
+* Após put_buffer: R vai de G1/G2 para F; B é incrementado em 1.
+* Após m1_done: M1 vai de W para D.
+
+As figuras abaixo mostra esse exemplo
+| Figura 1 | Figura 2 |
+|![](assets/Legenda_de_estados.png)| ![](assets/Regra_de_transicao.png)|
+
+</div>
 
 <img width="1320" height="820" alt="Sistema Físico - Planta" src="https://github.com/user-attachments/assets/b4ce9b42-23bc-4917-bfe4-5422360aec47" />
 
 <img width="980" height="780" alt="Sistema de Controle - Supervisor" src="https://github.com/user-attachments/assets/a353c47d-da4f-40d7-86d6-ecbf69d46b58" />
 
-
-
-
-
-
-
 ---
----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
