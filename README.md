@@ -119,9 +119,11 @@ Efeitos das transições:
 * Após put_buffer: R vai de G1/G2 para F; B é incrementado em 1.
 * Após m1_done: M1 vai de W para D.
 
-As figuras abaixo mostra esse exemplo
-| Figura 1 | Figura 2 |
-|![](assets/Legenda_de_estados.png)| ![](assets/Regra_de_transicao.png)|
+
+<div align="center">
+  <img src="assets/Legenda_de_estados.png" alt="Diagrama 1" width="45%">
+  <img src="assets/Regra_de_transicao.png" alt="Diagrama 2" width="45%">
+</div>
 
 </div>
 
