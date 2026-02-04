@@ -87,13 +87,17 @@ A imagem abaixo retrata a visão do ambiente em que as máquinas (M1 e M2) e o r
 
 #### Diagrama de Blocos
 
-O autômato(S) será definido como sendo uma 5-tupla $$ S = (Q, \Sigma, \delta, q_0, Q_m) $$ 
+\[S = (Q, \Sigma, \delta, q_0, Q_m)\]
+
 Onde:
+
 - **Q**: Conjunto de estados
-- **$$\Sigma$$**: Alfabeto de entrada
-- **$$\delta$$**: Função de transição
-- **$$q_0$$**: Estado inicial
-- **$$Q_m$$**: Estados de aceitação
+- **Σ**: Alfabeto de entrada
+- **δ**: Função de transição
+- **q₀**: Estado inicial
+- **Qₘ**: Estados de aceitação
+
+---
 
 <div align="justify">
 
@@ -121,27 +125,35 @@ Efeitos das transições:
 
 
 <div align="center">
-  <img src="assets/Legenda_de_estados.png" alt="Diagrama 1" width="45%">
-  <img src="assets/Regra_de_transicao.png" alt="Diagrama 2" width="45%">
+  <img src="assets/Legenda_de_estados.png" width="45%">
+  <img src="assets/Regra_de_transicao.png" width="45%">
 </div>
 
-</div>
+---
 
 <img width="1320" height="820" alt="Sistema Físico - Planta" src="https://github.com/user-attachments/assets/b4ce9b42-23bc-4917-bfe4-5422360aec47" />
 
 <img width="980" height="780" alt="Sistema de Controle - Supervisor" src="https://github.com/user-attachments/assets/a353c47d-da4f-40d7-86d6-ecbf69d46b58" />
 
-
-
-#### Figuras dos autômatos 
-
-
-<img width="980" height="780" alt="Sistema de Controle - Supervisor" src="https://github.com/lucas-guilherrme/C-lula-de-manufatura-com-rob-compartilhado/blob/main/assets/Visao%20do%20sistema_.png
-" />
-
 ---
 
+###  Figuras dos Autômatos
 
+<div align="center">
+
+**Máquina 1**  
+<img width="414" height="226" src="https://github.com/user-attachments/assets/f29295cb-e574-4977-a50a-82d849badfe8" />
+
+**Máquina 2**  
+<img width="597" height="257" src="https://github.com/user-attachments/assets/21f34ce0-aa51-490c-9f7a-3edfa4709894" />
+
+**Robô**  
+<img width="597" height="257" src="https://github.com/user-attachments/assets/e4712578-928e-42cc-acab-01d02fb0fd7d" />
+
+**Esteira (Buffer)**  
+<img width="409" height="186" src="https://github.com/user-attachments/assets/51db5874-5273-4f28-b010-024d118f44dc" />
+
+</div>
 
 
 
