@@ -87,7 +87,7 @@ A imagem abaixo retrata a visão do ambiente em que as máquinas (M1 e M2) e o r
 
 #### Diagrama de Blocos
 
-O aut^mato(S) será definido como sendo uma 5-tupla $$ S = (Q, \Sigma, \delta, q_0, Q_m) $$ 
+O autômato(S) será definido como sendo uma 5-tupla $$ S = (Q, \Sigma, \delta, q_0, Q_m) $$ 
 Onde:
 - **Q**: Conjunto de estados
 - **$$\Sigma$$**: Alfabeto de entrada
@@ -130,6 +130,14 @@ Efeitos das transições:
 <img width="1320" height="820" alt="Sistema Físico - Planta" src="https://github.com/user-attachments/assets/b4ce9b42-23bc-4917-bfe4-5422360aec47" />
 
 <img width="980" height="780" alt="Sistema de Controle - Supervisor" src="https://github.com/user-attachments/assets/a353c47d-da4f-40d7-86d6-ecbf69d46b58" />
+
+
+
+#### Figuras dos autômatos 
+
+
+<img width="980" height="780" alt="Sistema de Controle - Supervisor" src="https://github.com/lucas-guilherrme/C-lula-de-manufatura-com-rob-compartilhado/blob/main/assets/Visao%20do%20sistema_.png
+" />
 
 ---
 
