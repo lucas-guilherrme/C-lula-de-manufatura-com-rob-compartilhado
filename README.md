@@ -23,7 +23,7 @@
 ---
 <div align="justify">
   
-### Descrição do problema
+# 🌟 Descrição do problema
 
 * **Visão geral do sistema**
 O sistema consiste em uma célula de manufatura automatizada composta por duas estações de processamento independentes (Máquinas 1 e 2), um sistema de transporte compartilhado (Robô Industrial) e uma esteira de saída com capacidade de armazenamento limitada (Buffer).
