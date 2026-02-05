@@ -87,7 +87,7 @@ A imagem abaixo retrata a visão do ambiente em que as máquinas (M1 e M2) e o r
 
 #### Diagrama de Blocos
 
-\[S = (Q, \Sigma, \delta, q_0, Q_m)\]
+$$ S = (Q, \Sigma, \delta, q_0, Q_m) $$
 
 Onde:
 
@@ -101,7 +101,22 @@ Onde:
 
 <div align="justify">
 
-* O conjunto de estados é composto essencialmente pelos estados das máquinas ($$M_1$$ e $$M_2$$), robô e o buffer.
+* O conjunto de estados é composto essencialmente pelos estados das máquinas ($$M_1$$ e $$M_2$$), robô e o buffer, logo em seguida temos uma ilustração em diagrama de blocos que especifica o comportamento do sistema.
+
+<img 
+  width="1320" 
+  height="820" 
+  alt="Sistema Físico - Planta" 
+  src="https://github.com/user-attachments/assets/b4ce9b42-23bc-4917-bfe4-5422360aec47" />
+
+* Devemos sintetizar o supervisor, será ele qo responsavel pelo correto funcionamento do sistema. O supervisor não permitirar que o sistema chegue a uma das especificações não desejadas do projeto.
+
+<img 
+  width="1320" 
+  height="820" 
+  alt="Sistema de Controle - Supervisor" 
+  src="https://github.com/user-attachments/assets/a353c47d-da4f-40d7-86d6-ecbf69d46b58" />
+
 
 ### Estados dos Componentes (Vetor de Estado)
 
@@ -109,51 +124,83 @@ O vetor de estados global será uma tupla contendo o estado de cada um dos itens
 - __M1, M2 (Máquinas)__: W (Working/Trabalhando), D (Done/Pronta), I (Idle/Parada e vazia).
 - __R (Robô)__: F (Free/Livre e na posição neutra), G1 (Holding/Carregando peça da M1), G2 (Holding/Carregando peça da M2).
 - __B (Buffer)__: $$B_0, B_1, B_2$$ (número de peças no buffer, capacidade máxima=2).
+Devemos escolher os estados marcados, para usamos como base que um estado marcado é essencialmente a conclusão de tarefas como por exemplo a máquina 1 comcluiu a sua atividade. Os estados marcados listados abaixo.
+- __Máquinaas__
+    - Livre(Idle) e Concluido(Done)
+- __Buffer__
+    - Todos os estados são marcados pois temos que em todos os estados uma atividade foi conluida.
+- __Robô__
+    - Livre(free): Significa que ele já conluiu uma atividade ou está esperanndo as máquinas ligarem e concluirem suas atividades
+Para exemplificar melhor, temos um exemplo abaixo que descreve as limitações e as trnsações que poderão ser realizadas pela máquina 1.
 
 ## Exemplo
 
-* m1_start só é possível se M1 == I (máquina ociosa e vazia).
-* get_m1 só é possível se (M1 == D) and (R == F) (M1 pronta e robô livre).
-* put_buffer só é possível se (R == G1 or R == G2) and (B < 2) (Robô carregando e buffer não cheio).
-* buffer_out só é possível se (B > 0).
+* m1_start
+  * Só é possível se M1 == I (máquina ociosa e vazia).
+* get_m1
+  * Só é possível se (M1 == D) and (R == F) (M1 pronta e robô livre).
+* put_buffer
+  * Só é possível se (R == G1 or R == G2) and (B < 2) (Robô carregando e buffer não cheio).
+* buffer_out
+  * Só é possível se (B > 0).
+
+![Estado do sistema - Máquina M1](assets/Estados_da_maquina_1.png)
 
 Efeitos das transições:
 
-* Após get_m1: M1 vai de D para I; R vai de F para G1.
-* Após put_buffer: R vai de G1/G2 para F; B é incrementado em 1.
-* Após m1_done: M1 vai de W para D.
-
-
-<div align="center">
-  <img src="assets/Legenda_de_estados.png" width="45%">
-  <img src="assets/Regra_de_transicao.png" width="45%">
-</div>
-
----
-
-<img width="1320" height="820" alt="Sistema Físico - Planta" src="https://github.com/user-attachments/assets/b4ce9b42-23bc-4917-bfe4-5422360aec47" />
-
-<img width="980" height="780" alt="Sistema de Controle - Supervisor" src="https://github.com/user-attachments/assets/a353c47d-da4f-40d7-86d6-ecbf69d46b58" />
-
----
+* Após get_m1:
+    * M1 vai de D para I;
+    * R vai de F para G1.
+* Após put_buffer:
+    * R vai de G1/G2 para F;
+    * B é incrementado em 1.
+* Após m1_done:
+    * M1 vai de W para D.
 
 ###  Figuras dos Autômatos
 
-<div align="center">
+### Máquina M1
+<div align="left">
+<img 
+  width="564" 
+  height="406" 
+  src="https://github.com/user-attachments/assets/541957f2-4056-45dc-a9e4-934960f05d70" />
+</div>
 
-**Máquina 1**  
-<img width="414" height="226" src="https://github.com/user-attachments/assets/f29295cb-e574-4977-a50a-82d849badfe8" />
+### Máquina M2
+<div align="left">
+<img 
+  width="500" 
+  height="400" 
+  src="https://github.com/user-attachments/assets/b892bf49-17f6-440e-bd13-e4eca10cddda" />
+</div>
 
-**Máquina 2**  
-<img width="597" height="257" src="https://github.com/user-attachments/assets/21f34ce0-aa51-490c-9f7a-3edfa4709894" />
+### Robô
+<div align="left">
+<img 
+  width="500" 
+  height="400" 
+  src="https://github.com/user-attachments/assets/c4e93c4e-3d00-443d-b064-afe827239511" />
+</div>
 
-**Robô**  
-<img width="597" height="257" src="https://github.com/user-attachments/assets/e4712578-928e-42cc-acab-01d02fb0fd7d" />
+### Buffer
+<div align="left">
+<img width="507" height="430" alt="image" src="https://github.com/user-attachments/assets/0b94960c-ad56-47f1-b795-affc49d02a5f" />
+</div>
 
-**Esteira (Buffer)**  
-<img width="409" height="186" src="https://github.com/user-attachments/assets/51db5874-5273-4f28-b010-024d118f44dc" />
+### Supervisor com apenas a máquina M1
+<div align="left">
+<img 
+ <img width="562" height="603" alt="image" src="https://github.com/user-attachments/assets/12361bd3-a4cb-48e3-8c84-1c3d4882fefc" />
 
 </div>
+
+### Suoervisor com as duas máquinas (M1 e M2)
+<div align="left">
+<img width="584" height="604" alt="{D73D6138-3BFC-424F-A875-1BB7A0315616}" src="https://github.com/user-attachments/assets/78039b10-f5db-46eb-8973-4a7821acf616" />
+</div>
+
+
 
 
 
