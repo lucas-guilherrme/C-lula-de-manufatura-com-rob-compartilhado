@@ -18,7 +18,7 @@
 - [Diagrama de blocos e explicação](#-Diagrama-de-blocos-e-explicação)
   - [Diagrama de Blocos](#-Diagrama-de-blocos)
   - [Figuras dos autômatos](#-Figuras-automatos)
-  - [Links dos videos](#-link-videos)
+  - [Link do video](#-link-videos)
 
 ---
 <div align="justify">
@@ -200,8 +200,9 @@ Efeitos das transições:
 <img width="584" height="604" alt="{D73D6138-3BFC-424F-A875-1BB7A0315616}" src="https://github.com/user-attachments/assets/78039b10-f5db-46eb-8973-4a7821acf616" />
 </div>
 
+### Link do video
 
-
+https://youtu.be/SxyagKPxo1o
 
 
 
